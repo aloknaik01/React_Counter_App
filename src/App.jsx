@@ -1,9 +1,11 @@
-import React from 'react'
-
+import React from "react";
+import Counter from "./components/Counter.jsx";
 const App = () => {
   return (
-    <div>Counter App</div>
-  )
-}
+    <div className="app">
+      <Counter />
+    </div>
+  );
+};
 
-export default App
+export default App;
