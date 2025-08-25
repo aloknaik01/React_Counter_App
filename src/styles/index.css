@@ -1,0 +1,203 @@
+:root {
+  /* Colors */
+  --color-bg: #0b0c10;
+  --color-surface: #111218;
+  --color-border: #1f2430;
+  --color-text: #e6e6e6;
+  --color-subtle: #b6b6b6;
+  --color-primary: #6ee7b7; /* mint */
+  --color-danger: #ff6b6b;
+  --color-focus: #60a5fa;
+}
+
+/* Light theme  */
+:root[data-theme="light"] {
+  --color-bg: #f7fafc;
+  --color-surface: #ffffff;
+  --color-border: #e2e8f0;
+  --color-text: #111827;
+  --color-subtle: #4b5563;
+  --color-primary: #2563eb;
+  --color-danger: #dc2626;
+  --color-focus: #1d4ed8;
+}
+
+/* Sizing & spacing */
+:root {
+  --radius: 16px;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  --container: 720px;
+  --gap: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: radial-gradient(
+      1200px 800px at 80% -20%,
+      rgba(110, 231, 183, 0.08),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 600px at -10% 120%,
+      rgba(37, 99, 235, 0.08),
+      transparent 60%
+    ),
+    var(--color-bg);
+  color: var(--color-text);
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: 28px;
+}
+h2 {
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+label {
+  font-size: 14px;
+  color: var(--color-subtle);
+}
+
+.row {
+  display: flex;
+  gap: var(--gap);
+  align-items: center;
+}
+.col {
+  display: grid;
+  gap: 8px;
+}
+.grid {
+  display: grid;
+  gap: var(--gap);
+}
+
+/* Inputs */
+.input {
+  width: 120px;
+  padding: 10px 12px;
+  background: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  outline: none;
+}
+.input:focus {
+  border-color: var(--color-focus);
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.25);
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: transform 0.06s ease, background 0.2s ease, border-color 0.2s ease;
+}
+.btn:hover {
+  border-color: var(--color-subtle);
+}
+.btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.35);
+}
+.btn--primary {
+  background: linear-gradient(
+    180deg,
+    var(--color-primary),
+    color-mix(in lab, var(--color-primary) 70%, black)
+  );
+  color: white;
+  border: none;
+}
+.btn--danger {
+  background: linear-gradient(
+    180deg,
+    var(--color-danger),
+    color-mix(in lab, var(--color-danger) 70%, black)
+  );
+  color: white;
+  border: none;
+}
+.btn--ghost {
+  background: transparent;
+}
+
+/* Switch */
+.switch {
+  position: relative;
+  width: 52px;
+  height: 28px;
+  background: var(--color-border);
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+}
+.switch__dot {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 24px;
+  height: 24px;
+  background: white;
+  border-radius: 50%;
+  transition: left 0.2s ease;
+}
+.switch--on {
+  background: color-mix(in lab, var(--color-primary) 35%, var(--color-border));
+}
+.switch--on .switch__dot {
+  left: 26px;
+}
+
+/* Utility */
+.mono {
+  font-variant-numeric: tabular-nums;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+.muted {
+  color: var(--color-subtle);
+}
+.small {
+  font-size: 12px;
+}
+.center {
+  text-align: center;
+}
+.spread {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.grow {
+  flex: 1;
+}
