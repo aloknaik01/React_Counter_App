@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 
 function Counter() {
   const [count, setCount] = useState(0);
