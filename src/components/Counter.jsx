@@ -1,8 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 function Counter() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(() => {
+    const savedCount = localStorage.getItem("count");
+    return savedCount !== null ? parseInt(savedCount, 10) : 0;
+  });
+
+  useEffect(() => {
+    localStorage.setItem("count", count);
+  }, [count]);
 
   return (
     <div className="counter">
