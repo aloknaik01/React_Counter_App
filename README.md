@@ -1,12 +1,38 @@
-# React + Vite
+# 🧮 Counter App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple, beginner-friendly **Counter App** built with **React + Tailwind CSS**.  
+Deployed on **Netlify** with SPA redirects and caching enabled for production.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+🔗 [View Counter App](https://reactscounter.netlify.app/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Features
+
+- ➕ Increment and ➖ Decrement counter
+- 🔄 Reset counter to zero
+- 💾 Saved count with local storage
+- 📱 Fully responsive (mobile, tablet, desktop)
+- ⚡ Fast & secure (deployed on Netlify with HTTPS, caching, and redirects)
+
+---
+
+## 🛠️ Tech Stack
+
+- **React** (UI Framework)
+- **CSS** (Styling)
+- **Lucide React** (Icons)
+- **Netlify** (Deployment)
+
+---
+
+## 📦 Installation (For Local Development)
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/aloknaik01/React_Counter_App
+   ```
