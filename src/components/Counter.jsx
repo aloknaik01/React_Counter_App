@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { Minus, Plus, RotateCcw } from "lucide-react";
 
 function Counter() {
   const [count, setCount] = useState(() => {
@@ -29,7 +30,10 @@ function Counter() {
           className="btn"
           onClick={() => setCount(count - 1)}
         >
-          ➖ Decrement
+          <div className="flex">
+            <Minus />
+            <span>Decrement</span>
+          </div>
         </motion.button>
 
         <motion.button
@@ -37,7 +41,10 @@ function Counter() {
           className="btn primary"
           onClick={() => setCount(count + 1)}
         >
-          ➕ Increment
+          <div className="flex">
+            <Plus />
+            <span>Increment</span>
+          </div>
         </motion.button>
 
         <motion.button
@@ -45,7 +52,10 @@ function Counter() {
           className="btn reset"
           onClick={() => setCount(0)}
         >
-          🔄 Reset
+          <div className="flex">
+            <RotateCcw />
+            <span>Reset</span>
+          </div>
         </motion.button>
       </div>
     </div>

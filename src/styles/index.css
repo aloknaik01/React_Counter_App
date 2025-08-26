@@ -106,3 +106,20 @@ body {
   background: var(--danger);
   color: #fff;
 }
+.light-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #f0f4ff;
+}
+.dark-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}

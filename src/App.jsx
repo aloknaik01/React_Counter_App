@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Counter from "./components/Counter";
 import { motion } from "framer-motion";
 import "./styles/index.css";
+import { Moon, Sun, TableProperties } from "lucide-react";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -30,9 +31,17 @@ function App() {
         transition={{ duration: 0.5 }}
       >
         <header className="header">
-          <h1 className="title">⚡ Counter App</h1>
+          <h1 className="title"><div className="flex"><TableProperties /> Counter App</div></h1>
           <button className="toggle-btn" onClick={toggleTheme}>
-            {theme === "light" ? "🌙 Dark" : "☀️ Light"}
+            {theme === "light" ? (
+              <div className="dark-btn">
+                <Moon /> <span>Dark</span>
+              </div>
+            ) : (
+              <div className="light-btn">
+                <Sun /> <span>Light</span>
+              </div>
+            )}
           </button>
         </header>
 
